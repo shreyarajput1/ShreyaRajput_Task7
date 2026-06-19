@@ -1,0 +1,206 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Hamburger Menu */
+#menu-toggle{
+    display:none;
+}
+
+.hamburger{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* Header */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 5%;
+    position:relative;
+}
+
+.logo h2{
+    margin:0;
+}
+
+.user-info{
+    color:rgb(49,179,223);
+    font-weight:bold;
+}
+
+/* Navigation */
+.nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav a{
+    text-decoration:none;
+    color:black;
+    transition:0.3s;
+}
+
+.nav a:hover{
+    color:rgb(49,179,223);
+}
+
+/* Hero Section */
+.Hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    padding:50px 7%;
+}
+
+.Hero .info,
+.Hero .image{
+    flex:1;
+}
+
+.Hero .info h1{
+    font-size:55px;
+    line-height:1.2;
+}
+
+.Hero .info span{
+    color:rgb(49,179,223);
+}
+
+.Hero .info p{
+    margin-top:20px;
+    line-height:1.8;
+}
+
+.Hero .image img{
+    width:100%;
+    max-width:450px;
+    display:block;
+    margin:auto;
+}
+
+/* Button */
+button{
+    margin-top:20px;
+    background:rgb(49,179,223);
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:rgb(37,150,190);
+}
+
+/* Tablet */
+@media screen and (max-width:768px){
+
+    .Hero{
+        flex-direction:column-reverse;
+        text-align:center;
+        padding:40px 20px;
+    }
+
+    .Hero .info h1{
+        font-size:40px;
+    }
+
+    .Hero .image img{
+        max-width:300px;
+    }
+
+    #menu-toggle{
+    display:none;
+}
+
+    .hamburger{
+        display:none;
+        font-size:30px;
+        cursor:pointer;
+    }
+
+    .nav{
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#fff;
+        box-shadow:0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav ul{
+        flex-direction:column;
+        gap:0;
+    }
+
+    .nav li{
+        text-align:center;
+        padding:15px;
+        border-bottom:1px solid #eee;
+    }
+
+    #menu-toggle:checked ~ .nav{
+        display:block;
+    }
+
+    
+}
+
+/* Mobile */
+@media screen and (max-width:480px){
+
+    .header{
+        padding:15px;
+    }
+
+    .header .nav{
+        margin-left:20%;
+    }
+    .logo h2{
+        font-size:24px;
+    }
+
+    #menu-toggle{
+    display:none;
+    }
+
+    .hamburger{
+        display:none;
+        font-size:30px;
+        cursor:pointer;
+    }
+        .Hero{
+        padding:25px 15px;
+    }
+
+    .Hero .info h1{
+        font-size:30px;
+    }
+
+    .Hero .info p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .Hero .image img{
+        max-width:250px;
+    }
+
+    button{
+        width:100%;
+    }
+}
