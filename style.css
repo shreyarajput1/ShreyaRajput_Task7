@@ -8,16 +8,6 @@ body{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-/* Hamburger Menu */
-#menu-toggle{
-    display:none;
-}
-
-.hamburger{
-    display:none;
-    font-size:30px;
-    cursor:pointer;
-}
 
 /* Header */
 .header{
@@ -108,6 +98,15 @@ button:hover{
 /* Tablet */
 @media screen and (max-width:768px){
 
+    .logo h2{
+        font: size 1.4em;
+    }
+    .user-info{
+        font-size:14px;
+    }
+    .nav ul li a{
+        font-size: 13px;
+    }
     .Hero{
         flex-direction:column-reverse;
         text-align:center;
@@ -121,17 +120,6 @@ button:hover{
     .Hero .image img{
         max-width:300px;
     }
-
-    #menu-toggle{
-    display:none;
-}
-
-    .hamburger{
-        display:none;
-        font-size:30px;
-        cursor:pointer;
-    }
-
     .nav{
         display:none;
         position:absolute;
@@ -153,10 +141,7 @@ button:hover{
         border-bottom:1px solid #eee;
     }
 
-    #menu-toggle:checked ~ .nav{
-        display:block;
-    }
-
+ 
     
 }
 
@@ -171,19 +156,13 @@ button:hover{
         margin-left:20%;
     }
     .logo h2{
-        font-size:24px;
+        font: size 1.3em;
     }
-
-    #menu-toggle{
-    display:none;
+    .user-info p{
+        font-size:13px;
     }
-
-    .hamburger{
-        display:none;
-        font-size:30px;
-        cursor:pointer;
-    }
-        .Hero{
+   
+    .Hero{
         padding:25px 15px;
     }
 
@@ -202,5 +181,14 @@ button:hover{
 
     button{
         width:100%;
+    }
+    .nav{
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#fff;
+        box-shadow:0 5px 10px rgba(0,0,0,0.1);
     }
 }
